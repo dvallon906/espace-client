@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "fontNSG";
+    src: url(../assets/fonts/fontNSG.ttf);
+}
+
+:root {
+    --main-bg-color: #02B7DB;
+    --main-text-color: white;
+  }
+
+
+*{
+    color: var(--main-text-color);
+    margin: 0;
+    padding: 0;
+    font-family: "fontNSG", sans-serif;
+    background: var(--main-bg-color);
+    /* Pour visualiser les différents block */
+     /* border: solid 1px red;   */
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+}
+
+h1{
+
+    text-align: center;
+}
+
+html { height: 100%; }
+body { min-height: 100%; }
+
+.areaFull{
+    margin: auto;
+    height: 2000px;
+    width: 90%;
+    display: grid; 
+    grid-template-rows: 100px 1fr; 
+    grid-template-columns: 300px 1fr; 
+    gap: 0px 0%; 
+    grid-template-areas: 
+      "areaTop areaTop"
+      "areaLeft areaCenter"; 
+
+    border: solid 1px rgb(153, 0, 255);
+    background: black;
+}
+.areaTop{
+    grid-area: areaTop;
+    border: solid 1px red;
+    background: white;
+
+}
+.areaLeft{
+    grid-area: areaLeft;
+    border: solid 1px red;
+    background: yellow;
+}
+.areaCenter{
+    grid-area: areaCenter;
+    border: solid 1px red;
+    background: rgb(0, 255, 115);
+
+}
+
+  
