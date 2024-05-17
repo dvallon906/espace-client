@@ -10,59 +10,65 @@
 
 
 *{
-    color: var(--main-text-color);
+    color: black;
     margin: 0;
     padding: 0;
     font-family: "fontNSG", sans-serif;
-    background: var(--main-bg-color);
+    background: white;
     /* Pour visualiser les différents block */
      /* border: solid 1px red;   */
 }
 
-.menu{
-    position: fixed;
-    top: 0;
-}
 
 h1{
 
     text-align: center;
 }
 
-html { height: 100%; }
-body { min-height: 100%; }
-
 .areaFull{
     margin: auto;
-    height: 2000px;
-    width: 90%;
+    width: auto;
+    height: 100vh;
     display: grid; 
-    grid-template-rows: 100px 1fr; 
-    grid-template-columns: 300px 1fr; 
+    /* grid-auto-flow: row dense;  */
+    grid-template-columns: 146px 1fr 300px; 
+    grid-template-rows: 98px 98px 1fr 150px; 
     gap: 0px 0%; 
     grid-template-areas: 
-      "areaTop areaTop"
-      "areaLeft areaCenter"; 
-
-    border: solid 1px rgb(153, 0, 255);
-    background: black;
-}
-.areaTop{
-    grid-area: areaTop;
-    border: solid 1px red;
-    background: white;
-
-}
-.areaLeft{
-    grid-area: areaLeft;
-    border: solid 1px red;
+      "a a a"
+      "b d d"
+      "b c c"
+      "b e f"
+      ; 
     background: yellow;
 }
-.areaCenter{
-    grid-area: areaCenter;
-    border: solid 1px red;
-    background: rgb(0, 255, 115);
-
+.areaTop{
+    grid-area: a;
+    background: var(--main-bg-color);
 }
 
-  
+.areaLeft{
+    grid-area: b;
+    background: #E9E9E9;
+}
+
+.areaCenter{
+    grid-area: c;
+    background: white
+}
+
+.areaTopCenter{
+    grid-area: d;
+    background: black
+}
+
+.areaFooterCenter{
+    grid-area: e;
+    background: black
+}
+
+.areaFooterRight{
+    grid-area: f;
+    background: var(--main-bg-color);
+}
+
