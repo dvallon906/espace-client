@@ -1,11 +1,25 @@
 @font-face {
-    font-family: "fontNSG";
-    src: url(../assets/fonts/fontNSG.ttf);
+    font-family: "fontOswald";
+    src: url(../assets/fonts/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "fontOswald-Light";
+    src: url(../assets/fonts/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: "fontRaleway";
+    src: url(../assets/fonts/Raleway-VariableFont_wght.ttf);
 }
 
 :root {
-    --main-bg-color: #02B7DB;
-    --main-text-color: white;
+    --color1: #02B7DB;
+    --colorGrey: rgb(74, 74, 74);
+    --colorWhite: white;
+    --main-font-oswald: fontOswald;
+    --main-font-raleway: fontRaleway:
+
   }
 
 
@@ -13,7 +27,7 @@
     color: black;
     margin: 0;
     padding: 0;
-    font-family: "fontNSG", sans-serif;
+    font-family: "fontRaleway", sans-serif;
     background: white;
     /* Pour visualiser les différents block */
      /* border: solid 1px red;   */
@@ -25,14 +39,23 @@ h1{
     text-align: center;
 }
 
+h2{
+    font-family: var(--main-font-oswald);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--colorWhite);
+    background-color: transparent;
+    margin-block: auto;
+    padding: 10px;
+}
+
 .areaFull{
     margin: auto;
     width: auto;
     height: 100vh;
     display: grid; 
-    /* grid-auto-flow: row dense;  */
     grid-template-columns: 146px 1fr 300px; 
-    grid-template-rows: 98px 98px 1fr 150px; 
+    grid-template-rows: 98px 98px 1fr 135px; 
     gap: 0px 0%; 
     grid-template-areas: 
       "a a a"
@@ -43,32 +66,273 @@ h1{
     background: yellow;
 }
 .areaTop{
+    background: var(--color1);
     grid-area: a;
-    background: var(--main-bg-color);
+    display: grid; 
+    grid-template-columns: 146px 1fr 100px 120px; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0%; 
+    grid-template-areas: 
+      "a1 a2 a3 a4"
+      ; 
 }
+
+.areaTopC1{
+    grid-area: a1;
+    background-color: transparent;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+.areaTopC2{
+    font-family: var(--main-font-oswald);
+    grid-area: a2;
+    background-color: transparent;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    text-transform:uppercase;
+    align-content: center;
+}
+
+.areaTopC3{
+    grid-area: a3;
+    background-color: transparent;
+    margin:auto;
+}
+
+
+.areaTopC4{
+    grid-area: a4;
+    background-color: transparent;
+    margin:auto;
+}
+
 
 .areaLeft{
     grid-area: b;
     background: #E9E9E9;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+   }
+   
+.flexbox-item {
+    flex: 0 1 auto;
 }
+   
+
 
 .areaCenter{
     grid-area: c;
-    background: white
+
+    background: white;
+    padding: 30px;
+    width: auto;
+    height: auto;
+
+    display: grid; 
+    grid-template-columns: 50px 1fr; 
+    grid-template-rows: 80px 80px 80px; 
+    gap: 0px 0%; 
+    grid-template-areas: 
+      "l1c1 l1c2"
+      "l2c1 l2c2"
+      "l3c1 l3c2"
+      ; 
+    background: var(--colorWhite);
+
+}
+.l1c1{
+    grid-area: l1c1;
+    background: url(../assets/images/password-dsable.png) center no-repeat;
+   
+}
+.l1c2{
+    grid-area: l1c2;
+    font-family: var(--main-font-oswald);
+    font-size: 65px;
+    padding-left: 20px; 
+    margin-top: -10px;
+     /* margin-block: auto; */
+}
+.l2c1{
+    grid-area: l2c1;
+    background: url(../assets/images/contrat-disabled.png) center no-repeat;
+
+}
+.l2c2{
+    grid-area: l2c2;
+    font-size: 26px;
+    padding-left: 20px;
+    margin-block: auto;
+    font-family: var(--main-font-oswald);
+    font-size: 26px;
+    color: var(--color1);
+    text-transform: uppercase;
+    padding: 20px;
+    transition: background-color .5s ease-in-out;
+
+}
+.l2c2:hover{
+    background: #02b7db30;
+    cursor:pointer;
+}
+
+
+.l3c1{
+    grid-area: l3c1;
+    background: url(../assets/images/facture-disabled.png) center no-repeat;
+
+}
+.l3c2{
+    grid-area: l3c2;
+    font-size: 26px;
+    padding-left: 20px;
+    margin-block: auto;
+    font-family: var(--main-font-oswald);
+    font-size: 26px;
+    color: var(--color1);
+    text-transform: uppercase;
+    padding: 20px;
+    transition: background-color .5s ease-in-out;
+}
+.l3c2:hover{
+    background: #02b7db30;
+    cursor:pointer;
 }
 
 .areaTopCenter{
     grid-area: d;
-    background: black
+    background: black;
+    padding-left: 20px;
+    display: flex;
 }
 
 .areaFooterCenter{
     grid-area: e;
-    background: black
+    background: black;
+
+    padding: 10px 35px;
 }
 
 .areaFooterRight{
     grid-area: f;
-    background: var(--main-bg-color);
+    background: var(--color1);
+
+    padding: 10px 35px;
 }
 
+.lang{
+    font-family: var(--main-font-oswald);
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Les boutons du Menu  ********************************************************************************************************************** */
+
+/* L'élément container regroupant tous les "Menu/Image" */
+.btnMenuPlusImage{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+
+}
+.btnMenuPlusImage:hover{
+    cursor: pointer; 
+}
+
+
+/* Pour tout les textes des MenuPlusImage */
+.btnMenuPlusImage > .caption {
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: color .2s ease-in-out;
+    background: transparent;
+}
+
+.btnMenuPlusImage > .color1 {
+    color: var(--colorGrey);
+}
+.btnMenuPlusImage:hover > .color1 {
+    color: var(--color1);
+}
+
+.btnMenuPlusImage > .colorWhite {
+    color: var(--colorGrey);
+}
+.btnMenuPlusImage:hover > .colorWhite {
+    color: var(--colorWhite);
+}
+
+/* Pour toutes les images des MenuPlusImage */
+.btnMenuPlusImage > .image{
+    transition: background-image .2s ease-in-out;
+    width: 50px;
+    height: 50px;
+}
+
+/* Les boutons en haut à droite */
+#imgDisconnect{background: url(../assets/images/disconnect-disabled.png) center no-repeat;}
+.btnMenuPlusImage:hover >#imgDisconnect{background: url(../assets/images/disconnect-enabled.png) center no-repeat;}
+
+#imgCart{background: url(../assets/images/cart-disabled.png) center no-repeat;}
+.btnMenuPlusImage:hover >#imgCart{background: url(../assets/images/cart-enabled.png) center no-repeat;}
+
+
+/* Les boutons du menu */
+#imgHome{background: url(../assets/images/home-disabled.png) center no-repeat;}
+.btnMenuPlusImage:hover >#imgHome{background: url(../assets/images/home-enabled.png) center no-repeat;}
+
+#imgContrat{background: url(../assets/images/contrat-disabled.png) center no-repeat;}
+.btnMenuPlusImage:hover >#imgContrat{background: url(../assets/images/contrat-enabled.png) center no-repeat;}
+
+#imgFactures{background: url(../assets/images/facture-disabled.png) center no-repeat;}
+.btnMenuPlusImage:hover >#imgFactures{background: url(../assets/images//facture-enabled.png) center no-repeat;}
+
+#imgProfil{background: url(../assets/images/profil-disabled.png) center no-repeat;}
+.btnMenuPlusImage:hover >#imgProfil{background: url(../assets/images/profil-enabled.png) center no-repeat;}
+
+#imgInfo{background: url(../assets/images/info-disabled.png) center no-repeat;}
+.btnMenuPlusImage:hover >#imgInfo{background: url(../assets/images/info-enabled.png) center no-repeat;}
+
+#btnFrequentation{
+    font-family: var(--main-font-oswald);
+    font-size: 26px;
+    color: var(--color1);
+    background: transparent;
+    padding-left: 10px;
+    text-transform:uppercase;
+    transition: color .2s ease-in-out;
+
+}
+#btnFrequentation:hover{
+    color: var(--colorWhite);
+    cursor: pointer; 
+}
+
+#btnFacturesRetard{
+    font-family: var(--main-font-oswald);
+    font-size: 26px;
+    color: red;
+    background: transparent;
+    padding-left: 10px;
+    text-transform:uppercase;
+    transition: color .2s ease-in-out;
+}
+#btnFacturesRetard:hover{
+    color: var(--colorWhite);
+    cursor: pointer; 
+}

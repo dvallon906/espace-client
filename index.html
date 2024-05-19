@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <script src="./scripts/script.js"></script>
     <link rel="stylesheet" href="./styles/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,14 +9,70 @@
   </head>
   <body>
     <div class="areaFull">
-      <div class="areaTop">Espace client</div>
-      <div class="areaLeft">
-        <button class="menu1">menu1</button>
+      <div class="areaTop">
+        <div class="areaTopC1">
+          <div class="lang" id="langFR">FR</div>
+          <div class="lang" id="langFR">US</div>
+          <div class="lang" id="langFR">DE</div>
+          <div class="lang" id="langFR">IT</div>
+        </div>
+        <div class="areaTopC2">espace client</div>
+        <div class="areaTopC3">
+          <div class="btnMenuPlusImage">
+            <div class="image" id="imgDisconnect"></div>
+            <div class="caption colorWhite">Déconnecter</div>
+          </div>
+        </div>
+        <div class="areaTopC4">
+          <div class="btnMenuPlusImage">
+            <div class="image" id="imgCart"></div>
+            <div class="caption colorWhite">Panier</div>
+          </div>
+        </div>
       </div>
-      <div class="areaTopCenter"></div>
-      <div class="areaCenter"></div>
-      <div class="areaFooterCenter"></div>
-      <div class="areaFooterRight"></div>
+      <div class="areaLeft">
+        <div class="btnMenuPlusImage">
+          <div class="image" id="imgHome"></div>
+          <div class="caption color1">Home</div>
+        </div>
+        <div class="btnMenuPlusImage">
+          <div class="image" id="imgContrat"></div>
+          <div class="caption color1">Contrat</div>
+        </div>
+        <div class="btnMenuPlusImage">
+          <div class="image" id="imgFactures"></div>
+          <div class="caption color1">Factures</div>
+        </div>
+        <div class="btnMenuPlusImage">
+          <div class="image" id="imgProfil"></div>
+          <div class="caption color1">Profil</div>
+        </div>
+        <div class="btnMenuPlusImage">
+          <div class="image" id="imgInfo"></div>
+          <div class="caption color1">Info</div>
+        </div>
+      </div>
+      <div class="areaTopCenter">
+        <h2>Bonjour Daniel</h2>
+      </div>
+      <div class="areaCenter">
+        <div class="l1c1"></div>
+        <div class="l1c2">67049999#</div>
+
+        <div class="l2c1"></div>
+        <div class="l2c2">Votre contrat</div>
+
+        <div class="l3c1"></div>
+        <div class="l3c2">Vos facture et paiements</div>
+      </div>
+      <div class="areaFooterCenter">
+        <h2>Planifier votre visite au club</h2>
+        <div id="btnFrequentation">Voir la fréquentation</div>
+      </div>
+      <div class="areaFooterRight">
+        <h2>Factures en retard</h2>
+        <div id="btnFacturesRetard">588 chf</div>
+      </div>
     </div>
   </body>
 </html>
