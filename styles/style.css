@@ -126,87 +126,67 @@ h2{
 .flexbox-item {
     flex: 0 1 auto;
 }
+
    
-
-
-.areaCenter{
+#flexCenter{
     grid-area: c;
-
-    background: white;
+    display: table-cell;
     padding: 30px;
-    width: auto;
-    height: auto;
-
-    display: grid; 
-    grid-template-columns: 50px 1fr; 
-    grid-template-rows: 80px 80px 80px; 
-    gap: 0px 0%; 
-    grid-template-areas: 
-      "l1c1 l1c2"
-      "l2c1 l2c2"
-      "l3c1 l3c2"
-      ; 
-    background: var(--colorWhite);
-
 }
-.l1c1{
-    grid-area: l1c1;
-    background: url(../assets/images/password-dsable.png) center no-repeat;
-   
+
+.rowFlexCenter{
+    display: flex;
+    width: 600px;
+    height: 75px;
+    padding: 0px 0px;
+    transition: background-color .5s ease-in-out;
+    align-items: center;
+
+    
 }
-.l1c2{
-    grid-area: l1c2;
+
+#flexCenter .image{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+#flexCenter .libelle{
+    width: 300px;
+    background-color: transparent;
+    padding-left: 20px;
+    
+}
+#imgCodeBar{background: url(../assets/images/password-dsable.png) center no-repeat;}
+#imgVotreContrat{background: url(../assets/images/contrat-disabled.png) center no-repeat;}
+#imgVosFactures{background: url(../assets/images/facture-disabled.png) center no-repeat;}
+
+
+
+#rowCodeBar{
+    height: 100px;
+    padding: 20px 0px 10px 0px;
+}
+
+#rowVotreContrat:hover, #rowVosFactures:hover{
+    background: #ECF9FC;
+    cursor:pointer;
+}
+
+#libCodebar{
     font-family: var(--main-font-oswald);
     font-size: 65px;
-    padding-left: 20px; 
-    margin-top: -10px;
-     /* margin-block: auto; */
+    color: var(--colorGrey);
 }
-.l2c1{
-    grid-area: l2c1;
-    background: url(../assets/images/contrat-disabled.png) center no-repeat;
 
-}
-.l2c2{
-    grid-area: l2c2;
-    font-size: 26px;
-    padding-left: 20px;
-    margin-block: auto;
+#libVotreContrat,#libVosFactures{
     font-family: var(--main-font-oswald);
-    font-size: 26px;
-    color: var(--color1);
+    font-size: 20px;
     text-transform: uppercase;
-    padding: 20px;
-    transition: background-color .5s ease-in-out;
-
-}
-.l2c2:hover{
-    background: #02b7db30;
-    cursor:pointer;
-}
-
-
-.l3c1{
-    grid-area: l3c1;
-    background: url(../assets/images/facture-disabled.png) center no-repeat;
-
-}
-.l3c2{
-    grid-area: l3c2;
-    font-size: 26px;
-    padding-left: 20px;
-    margin-block: auto;
-    font-family: var(--main-font-oswald);
-    font-size: 26px;
     color: var(--color1);
-    text-transform: uppercase;
-    padding: 20px;
-    transition: background-color .5s ease-in-out;
 }
-.l3c2:hover{
-    background: #02b7db30;
-    cursor:pointer;
-}
+
+
 
 .areaTopCenter{
     grid-area: d;
